@@ -77,6 +77,9 @@ extension TravelTalkViewController: UICollectionViewDelegate, UICollectionViewDa
                     cell.profileImageViews[i].layer.cornerRadius = cell.profileImageViews[i].frame.width / 2
                 }
             }
+            cell.userNameLabel.text = list.chatroomName
+            cell.recentMessageLabel.text = list.chatList.last?.message
+            cell.dateLabel.text = list.chatList.last?.date.stringToDateToString()
             
             
             return cell
@@ -91,7 +94,9 @@ extension TravelTalkViewController: UICollectionViewDelegate, UICollectionViewDa
             }
             cell.profileImageView.clipsToBounds = true
             cell.profileImageView.backgroundColor = .systemIndigo
-            
+            cell.userNameLabel.text = list.chatroomName
+            cell.recentMessageLabel.text = list.chatList.last?.message
+            cell.dateLabel.text = list.chatList.last?.date.stringToDateToString()
             
             return cell
         }
