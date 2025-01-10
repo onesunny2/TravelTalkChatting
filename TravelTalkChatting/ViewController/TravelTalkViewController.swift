@@ -31,8 +31,9 @@ extension TravelTalkViewController {
     func configCollectionViewLayout() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSizeMake(UIScreen.main.bounds.width - 40, 100)
-        layout.sectionInset = UIEdgeInsets(top: 8, left: 20, bottom: 8, right: 20)
+        layout.itemSize = CGSizeMake(UIScreen.main.bounds.width - 40, 90)
+        layout.sectionInset = UIEdgeInsets(top: 4, left: 20, bottom: 4, right: 20)
+        layout.minimumLineSpacing = 0
         
         chatCollectionView.collectionViewLayout = layout
     }
@@ -67,10 +68,14 @@ extension TravelTalkViewController: UICollectionViewDelegate, UICollectionViewDa
             cell.profileImageViews[2].image = UIImage(named: User.bran.profileImage)
             cell.profileImageViews[3].image = UIImage(named: User.den.profileImage)
             cell.profileImageViews.forEach {
-                $0.contentMode = .scaleAspectFill
-                $0.layer.cornerRadius = $0.frame.width / 2
+                $0.contentMode = .scaleAspectFit
                 $0.clipsToBounds = true
                 $0.backgroundColor = .orange
+            }
+            DispatchQueue.main.async {
+                for i in 0...3 {
+                    cell.profileImageViews[i].layer.cornerRadius = cell.profileImageViews[i].frame.width / 2
+                }
             }
             
             
@@ -78,6 +83,15 @@ extension TravelTalkViewController: UICollectionViewDelegate, UICollectionViewDa
             
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SingleChatCollectionViewCell.identifier, for: indexPath) as? SingleChatCollectionViewCell else { return UICollectionViewCell() }
+            
+            cell.profileImageView.image = UIImage(named: list.chatroomImage[0])
+            cell.profileImageView.contentMode = .scaleAspectFill
+            DispatchQueue.main.async {
+                cell.profileImageView.layer.cornerRadius = cell.profileImageView.frame.width / 2
+            }
+            cell.profileImageView.clipsToBounds = true
+            cell.profileImageView.backgroundColor = .systemIndigo
+            
             
             return cell
         }
