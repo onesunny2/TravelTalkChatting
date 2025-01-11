@@ -26,8 +26,32 @@ class ChattingViewController: UIViewController {
         print(mockChatList[listIndex].chatList.count)
         
         registerCells()
+        configUI()
     }
 
+}
+
+// MARK: - View 관련
+extension ChattingViewController {
+    
+    func configUI() {
+        
+        let placeholder = "메세지를 입력하세요 *_*"
+        
+        bgUIView.backgroundColor = .systemBackground
+        
+        chatboxImageView.backgroundColor = .systemGray6
+        chatboxImageView.layer.cornerRadius = 10
+        
+        chatTextField.borderStyle = .none
+        chatTextField.placeholder = placeholder
+        chatTextField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray, NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15, weight: .medium)])
+        chatTextField.keyboardType = .default
+        
+        sendButton.setTitle("", for: .normal)
+        sendButton.setImage(UIImage(systemName: "paperplane")?.withTintColor(.systemGray3, renderingMode: .alwaysOriginal), for: .normal)
+    }
+    
 }
 
 // MARK: - TableView 관련 설정
