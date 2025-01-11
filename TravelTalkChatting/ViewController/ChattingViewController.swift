@@ -57,21 +57,14 @@ extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyChatTableViewCell.identifier, for: indexPath) as? MyChatTableViewCell else { return UITableViewCell() }
             
-            cell.selectionStyle = .none
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.width)
-            
-            cell.configMyChat(chatlist)
+            cell.configMyChat(chatlist, tableView)
             
             return cell
         } else {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendChatTableViewCell.identifier, for: indexPath) as? FriendChatTableViewCell else { return UITableViewCell() }
-            
-            cell.selectionStyle = .none
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.width)
-            
-            cell.friendchatTextView.isScrollEnabled = false
-            cell.friendchatTextView.isEditable = false
+ 
+            cell.configFriendChat(chatlist, tableView)
             
             return cell
         }

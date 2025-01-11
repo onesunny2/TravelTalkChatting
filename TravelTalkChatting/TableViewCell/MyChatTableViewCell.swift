@@ -19,7 +19,11 @@ class MyChatTableViewCell: UITableViewCell {
         
     }
     
-    func configMyChat(_ chatlist: Chat) {
+    func configMyChat(_ chatlist: Chat, _ tableView: UITableView) {
+        
+        self.selectionStyle = .none
+        self.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.width)
+        
         messageDateLabel.text = chatlist.date.stringToDateToString2()
         messageDateLabel.commonDesign(color: .systemGray, size: 12, weight: .semibold)
         messageDateLabel.textAlignment = .right
