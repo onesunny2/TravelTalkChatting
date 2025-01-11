@@ -15,8 +15,64 @@ class TravelTalkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        chatCollectionView.delegate = self
+        chatCollectionView.dataSource = self
+        
+        registerCells()
+        configCollectionViewLayout()
     }
 
 
+}
+
+// MARK: - collectionView layout 설정
+extension TravelTalkViewController {
+    
+    func configCollectionViewLayout() {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.itemSize = CGSizeMake(UIScreen.main.bounds.width - 40, 90)
+        layout.sectionInset = UIEdgeInsets(top: 4, left: 20, bottom: 4, right: 20)
+        layout.minimumLineSpacing = 0
+        
+        chatCollectionView.collectionViewLayout = layout
+    }
+}
+
+
+// MARK: - CollectionView 설정
+extension TravelTalkViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func registerCells() {
+        let xib1 = UINib(nibName: SingleChatCollectionViewCell.identifier, bundle: nil)
+        chatCollectionView.register(xib1, forCellWithReuseIdentifier: SingleChatCollectionViewCell.identifier)
+        
+        let xib2 = UINib(nibName: MultiChatCollectionViewCell.identifier, bundle: nil)
+        chatCollectionView.register(xib2, forCellWithReuseIdentifier: MultiChatCollectionViewCell.identifier)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return mockChatList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let list = mockChatList[indexPath.row]  // 주어진 indexPath나 쓰자.. 무슨 부귀영화를 누리겠다고 고차함수 써보겠다며 시간낭비 한 것
+        
+        if list.chatroomImage.count != 1 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MultiChatCollectionViewCell.identifier, for: indexPath) as? MultiChatCollectionViewCell else { return UICollectionViewCell() }
+            
+            cell.configMulticell(list)
+
+            
+            return cell
+            
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SingleChatCollectionViewCell.identifier, for: indexPath) as? SingleChatCollectionViewCell else { return UICollectionViewCell() }
+            
+            cell.configSinglecell(list)
+            
+            return cell
+        }
+    }
 }
