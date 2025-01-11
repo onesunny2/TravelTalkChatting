@@ -27,9 +27,26 @@ class ChattingViewController: UIViewController {
         
         navigationItem.title = mockChatList[listIndex].chatroomName
         
+        
+        // 🥲🙋🏻‍♀️ 스크롤은 하는데, 뭔가 화면이 전환되는게 보이고 나서 내려가니 부자연 스러운데 방법이 없을지, 지연시키지 않으면 호출 순서로 인해 오류가 발생함
+        DispatchQueue.main.async { [self] in
+            let indexPath = IndexPath(item: mockChatList[self.listIndex].chatList.count - 1, section: 0)
+            chatTableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.bottom, animated: true)
+        }
+        
         registerCells()
         configUI()
+        chatTableView.rowHeight = UITableView.automaticDimension
     }
+    
+    // 아래 방법은 좀 반응이 느림
+   /* override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let indexPath = IndexPath(item: mockChatList[self.listIndex].chatList.count - 1, section: 0)
+        chatTableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.bottom, animated: true)
+        
+    } */
 
     @IBAction func didEndOnExitTextfield(_ sender: UITextField) {
     }
@@ -99,9 +116,5 @@ extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
 
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
     }
 }
