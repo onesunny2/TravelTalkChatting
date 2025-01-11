@@ -31,6 +31,9 @@ class TravelTalkViewController: UIViewController {
         registerCells()
         configCollectionViewLayout()
         confingSearchBar()
+        
+        navigationItem.backButtonTitle = ""
+        navigationController?.navigationBar.tintColor = .label
     }
 
 

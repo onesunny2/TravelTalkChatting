@@ -25,6 +25,8 @@ class ChattingViewController: UIViewController {
         print(listIndex)
         print(mockChatList[listIndex].chatList.count)
         
+        navigationItem.title = mockChatList[listIndex].chatroomName
+        
         registerCells()
         configUI()
     }
