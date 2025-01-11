@@ -62,41 +62,15 @@ extension TravelTalkViewController: UICollectionViewDelegate, UICollectionViewDa
         if list.chatroomImage.count != 1 {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MultiChatCollectionViewCell.identifier, for: indexPath) as? MultiChatCollectionViewCell else { return UICollectionViewCell() }
             
-            cell.backgroundColor = .systemBackground
-            cell.profileImageViews[0].image = UIImage(named: User.hue.profileImage)
-            cell.profileImageViews[1].image = UIImage(named: User.jack.profileImage)
-            cell.profileImageViews[2].image = UIImage(named: User.bran.profileImage)
-            cell.profileImageViews[3].image = UIImage(named: User.den.profileImage)
-            cell.profileImageViews.forEach {
-                $0.contentMode = .scaleAspectFit
-                $0.clipsToBounds = true
-                $0.backgroundColor = .orange
-            }
-            DispatchQueue.main.async {
-                for i in 0...3 {
-                    cell.profileImageViews[i].layer.cornerRadius = cell.profileImageViews[i].frame.width / 2
-                }
-            }
-            cell.userNameLabel.text = list.chatroomName
-            cell.recentMessageLabel.text = list.chatList.last?.message
-            cell.dateLabel.text = list.chatList.last?.date.stringToDateToString()
-            
+            cell.configMulticell(list)
+
             
             return cell
             
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SingleChatCollectionViewCell.identifier, for: indexPath) as? SingleChatCollectionViewCell else { return UICollectionViewCell() }
             
-            cell.profileImageView.image = UIImage(named: list.chatroomImage[0])
-            cell.profileImageView.contentMode = .scaleAspectFill
-            DispatchQueue.main.async {
-                cell.profileImageView.layer.cornerRadius = cell.profileImageView.frame.width / 2
-            }
-            cell.profileImageView.clipsToBounds = true
-            cell.profileImageView.backgroundColor = .systemIndigo
-            cell.userNameLabel.text = list.chatroomName
-            cell.recentMessageLabel.text = list.chatList.last?.message
-            cell.dateLabel.text = list.chatList.last?.date.stringToDateToString()
+            cell.configSinglecell(list)
             
             return cell
         }

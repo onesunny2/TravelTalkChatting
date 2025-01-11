@@ -18,7 +18,24 @@ class SingleChatCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        SingleChatCollectionViewCell().backgroundColor = .systemBackground
     }
-
+    
+    func configSinglecell(_ list: ChatRoom) {
+        
+        profileImageView.image = UIImage(named: list.chatroomImage[0])
+        profileImageView.contentMode = .scaleAspectFill
+        DispatchQueue.main.async {
+            self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
+        }
+        profileImageView.clipsToBounds = true
+        profileImageView.backgroundColor = .systemIndigo
+        userNameLabel.text = list.chatroomName
+        userNameLabel.commonDesign()
+        recentMessageLabel.text = list.chatList.last?.message
+        recentMessageLabel.commonDesign(color: .systemGray, size: 13, weight: .semibold)
+        dateLabel.text = list.chatList.last?.date.stringToDateToString()
+        dateLabel.commonDesign(color: .systemGray, size: 12, weight: .semibold)
+    }
 }
