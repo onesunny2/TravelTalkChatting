@@ -31,6 +31,9 @@ class TravelTalkViewController: UIViewController {
         registerCells()
         configCollectionViewLayout()
         confingSearchBar()
+        
+        navigationItem.backButtonTitle = ""
+        navigationController?.navigationBar.tintColor = .label
     }
 
 
@@ -136,6 +139,8 @@ extension TravelTalkViewController: UICollectionViewDelegate, UICollectionViewDa
         // 다음 채팅화면으로 들어가는 네비게이션 화면 전환
         let sb = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: ChattingViewController.identifier) as? ChattingViewController else { return }
+        
+        vc.listIndex = indexPath.item
         
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -31,7 +31,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kUc-pS-FjA">
-                        <rect key="frame" x="73" y="43.333333333333336" width="206" height="78.666666666666657"/>
+                        <rect key="frame" x="73" y="39.333333333333336" width="206" height="82.666666666666657"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                         <color key="textColor" systemColor="labelColor"/>
@@ -50,7 +50,7 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="kUc-pS-FjA" firstAttribute="top" secondItem="jSa-6Z-bPh" secondAttribute="bottom" constant="12" id="0p5-h7-KNZ"/>
+                    <constraint firstItem="kUc-pS-FjA" firstAttribute="top" secondItem="jSa-6Z-bPh" secondAttribute="bottom" constant="8" id="0p5-h7-KNZ"/>
                     <constraint firstItem="kUc-pS-FjA" firstAttribute="leading" secondItem="jSa-6Z-bPh" secondAttribute="leading" id="1Uw-K6-NmT"/>
                     <constraint firstItem="j07-Zv-apm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="CoV-sC-ZnV"/>
                     <constraint firstAttribute="bottom" secondItem="WBl-Qp-yVH" secondAttribute="bottom" constant="12" id="GES-FC-GbG"/>
@@ -67,7 +67,7 @@
                 <outlet property="friendNameLabel" destination="jSa-6Z-bPh" id="Hu4-7M-uN1"/>
                 <outlet property="friendchatTextView" destination="kUc-pS-FjA" id="YGF-RB-bvS"/>
                 <outlet property="messageDateLabel" destination="WBl-Qp-yVH" id="xzC-LH-Eq3"/>
-                <outlet property="profileImageVew" destination="j07-Zv-apm" id="8aw-oX-Sx3"/>
+                <outlet property="profileImageView" destination="j07-Zv-apm" id="8aw-oX-Sx3"/>
             </connections>
             <point key="canvasLocation" x="-228.24427480916029" y="-7.042253521126761"/>
         </tableViewCell>

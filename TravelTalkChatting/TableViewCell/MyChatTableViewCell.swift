@@ -16,13 +16,31 @@ class MyChatTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+    }
+    
+    func configMyChat(_ chatlist: Chat, _ tableView: UITableView) {
+        
+        self.selectionStyle = .none
+        self.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.width)
+        
+        messageDateLabel.text = chatlist.date.stringToDateToString2()
+        messageDateLabel.commonDesign(color: .systemGray, size: 12, weight: .semibold)
+        messageDateLabel.textAlignment = .right
+        
+        mychatTextView.text = chatlist.message
+        
+        mychatTextView.textColor = .darkText
+        mychatTextView.textAlignment = .left
+        mychatTextView.font = .systemFont(ofSize: 15, weight: .medium)
+        mychatTextView.isScrollEnabled = false
+        mychatTextView.isEditable = false
+        mychatTextView.textContainerInset = UIEdgeInsets(top: 12, left: 4, bottom: 12, right: 4)
+        mychatTextView.layer.borderWidth = 1.5
+        mychatTextView.layer.borderColor = UIColor.systemGray3.cgColor
+        mychatTextView.layer.cornerRadius = 15
+        mychatTextView.backgroundColor = .systemGray6
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
 }

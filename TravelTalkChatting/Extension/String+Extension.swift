@@ -21,4 +21,14 @@ extension String {
         return newString
     }
 
+    func stringToDateToString2() -> String {
+        String.dateformatter.locale = Locale(identifier: "ko_KR")
+        String.dateformatter.dateFormat = "yyyy-MM-dd HH:mm"
+        guard let newDate = String.dateformatter.date(from: self) else { return "" }
+        
+        String.dateformatter.dateFormat = "a HH:mm"
+        let newString = String.dateformatter.string(from: newDate)
+        
+        return newString
+    }
 }
