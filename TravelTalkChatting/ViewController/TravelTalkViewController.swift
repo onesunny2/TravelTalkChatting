@@ -17,12 +17,41 @@ class TravelTalkViewController: UIViewController {
 
         chatCollectionView.delegate = self
         chatCollectionView.dataSource = self
+        chatCollectionView.keyboardDismissMode = .interactive  // TODO: 작동여부 확인 필요
+        
+        chatSearchBar.delegate = self
         
         registerCells()
         configCollectionViewLayout()
+        confingSearchBar()
     }
 
 
+}
+
+// MARK: - SearchBar 관련
+extension TravelTalkViewController: UISearchBarDelegate {
+    
+    func confingSearchBar() {
+        chatSearchBar.placeholder = "친구 이름을 검색해보세요!"
+        chatSearchBar.keyboardType = .default
+        chatSearchBar.showsCancelButton = false
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+        searchBar.setShowsCancelButton(false, animated: true)
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(false, animated: true)
+        view.endEditing(true)
+    }
+    
 }
 
 // MARK: - collectionView layout 설정
