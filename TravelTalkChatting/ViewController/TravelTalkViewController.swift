@@ -25,9 +25,6 @@ class TravelTalkViewController: UIViewController {
 
         chatCollectionView.delegate = self
         chatCollectionView.dataSource = self
-        // 화면 스크롤 시도할 때 키보드 내려가는 모드
-        chatCollectionView.alwaysBounceVertical = true
-        chatCollectionView.keyboardDismissMode = .onDrag
         
         chatSearchBar.delegate = self
         
@@ -43,6 +40,10 @@ class TravelTalkViewController: UIViewController {
 extension TravelTalkViewController: UISearchBarDelegate {
     
     func confingSearchBar() {
+        // 화면 스크롤 시도할 때 키보드 내려가는 모드
+        chatCollectionView.alwaysBounceVertical = true
+        chatCollectionView.keyboardDismissMode = .onDrag
+        
         chatSearchBar.placeholder = "친구 이름을 검색해보세요!"
         chatSearchBar.keyboardType = .default
         chatSearchBar.showsCancelButton = false
