@@ -28,10 +28,10 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88:88 오후" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVZ-gN-t3Z">
-                        <rect key="frame" x="45" y="88" width="60" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88:88:88 오후" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVZ-gN-t3Z">
+                        <rect key="frame" x="15" y="88" width="90" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="ij2-0d-7nX"/>
+                            <constraint firstAttribute="width" constant="90" id="ij2-0d-7nX"/>
                             <constraint firstAttribute="height" constant="20" id="o9L-ti-BeO"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>

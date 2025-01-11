@@ -57,8 +57,11 @@ extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyChatTableViewCell.identifier, for: indexPath) as? MyChatTableViewCell else { return UITableViewCell() }
             
-            cell.messageDateLabel.text = chatlist.date.stringToDateToString()
+            cell.messageDateLabel.text = chatlist.date.stringToDateToString2()
+            cell.messageDateLabel.commonDesign(color: .systemGray, size: 12, weight: .semibold)
+            cell.messageDateLabel.textAlignment = .right
             cell.mychatTextView.text = chatlist.message
+            
             
             return cell
         } else {
