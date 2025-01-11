@@ -25,7 +25,9 @@ class TravelTalkViewController: UIViewController {
 
         chatCollectionView.delegate = self
         chatCollectionView.dataSource = self
-        chatCollectionView.keyboardDismissMode = .interactive  // TODO: 작동여부 확인 필요
+        // 화면 스크롤 시도할 때 키보드 내려가는 모드
+        chatCollectionView.alwaysBounceVertical = true
+        chatCollectionView.keyboardDismissMode = .onDrag
         
         chatSearchBar.delegate = self
         
