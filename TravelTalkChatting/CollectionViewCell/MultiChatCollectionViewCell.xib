@@ -10,17 +10,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MultiChatCollectionViewCell" id="hMg-ZF-VYH" customClass="MultiChatCollectionViewCell" customModule="TravelTalkChatting" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="564" height="130"/>
+            <rect key="frame" x="0.0" y="0.0" width="522" height="130"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="564" height="130"/>
+                <rect key="frame" x="0.0" y="0.0" width="522" height="130"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Y1-Y2-Cmo">
-                        <rect key="frame" x="113" y="43" width="380" height="44"/>
+                        <rect key="frame" x="113" y="43" width="338" height="44"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나야 단체톡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVA-Ph-ZPk">
-                                <rect key="frame" x="0.0" y="0.0" width="380" height="20"/>
+                                <rect key="frame" x="0.0" y="0.0" width="338" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="NiK-QY-cQ0"/>
                                 </constraints>
@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="왜요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOd-Qe-UuZ">
-                                <rect key="frame" x="0.0" y="28" width="380" height="16"/>
+                                <rect key="frame" x="0.0" y="28" width="338" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="LZj-WL-7JM"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="300" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" text="88.88.88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHo-nC-2Qz">
-                        <rect key="frame" x="505" y="43" width="55" height="15"/>
+                        <rect key="frame" x="463" y="43" width="55" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="Kv0-zZ-vDM"/>
                             <constraint firstAttribute="width" constant="55" id="UIv-oW-ywA"/>
@@ -102,7 +102,7 @@
                 <constraint firstAttribute="trailing" secondItem="yHo-nC-2Qz" secondAttribute="trailing" constant="4" id="yEu-Gu-4Ka"/>
                 <constraint firstItem="8Y1-Y2-Cmo" firstAttribute="centerY" secondItem="hMg-ZF-VYH" secondAttribute="centerY" id="yeX-hK-qIU"/>
             </constraints>
-            <size key="customSize" width="509" height="130"/>
+            <size key="customSize" width="467" height="130"/>
             <connections>
                 <outlet property="dateLabel" destination="yHo-nC-2Qz" id="zke-As-FsX"/>
                 <outlet property="recentMessageLabel" destination="zOd-Qe-UuZ" id="bC8-az-JAs"/>
@@ -112,7 +112,7 @@
                 <outletCollection property="profileImageViews" destination="Qdw-w8-L3d" collectionClass="NSMutableArray" id="UCX-zv-hKB"/>
                 <outletCollection property="profileImageViews" destination="eZz-R6-SeV" collectionClass="NSMutableArray" id="2T6-fG-kA0"/>
             </connections>
-            <point key="canvasLocation" x="-468.70229007633588" y="-38.028169014084511"/>
+            <point key="canvasLocation" x="-500.76335877862596" y="-38.028169014084511"/>
         </collectionViewCell>
     </objects>
 </document>
