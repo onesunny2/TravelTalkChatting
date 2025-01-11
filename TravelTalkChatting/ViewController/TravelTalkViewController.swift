@@ -130,4 +130,20 @@ extension TravelTalkViewController: UICollectionViewDelegate, UICollectionViewDa
             return cell
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        // 다음 채팅화면으로 들어가는 네비게이션 화면 전환
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: ChattingViewController.identifier) as? ChattingViewController else { return }
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
+
+/*
+ 네비게이션 전환방법 순서 되짚기
+ 1. 스토리보드 네임 등록
+ 2. 뷰 컨트롤러 등록
+ 3. 화면 넘겨주기
+ */
