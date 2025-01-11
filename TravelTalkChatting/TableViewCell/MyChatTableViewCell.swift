@@ -18,6 +18,25 @@ class MyChatTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
     }
+    
+    func configMyChat(_ chatlist: Chat) {
+        messageDateLabel.text = chatlist.date.stringToDateToString2()
+        messageDateLabel.commonDesign(color: .systemGray, size: 12, weight: .semibold)
+        messageDateLabel.textAlignment = .right
+        
+        mychatTextView.text = chatlist.message
+        
+        mychatTextView.textColor = .darkText
+        mychatTextView.textAlignment = .left
+        mychatTextView.font = .systemFont(ofSize: 15, weight: .medium)
+        mychatTextView.isScrollEnabled = false
+        mychatTextView.isEditable = false
+        mychatTextView.textContainerInset = UIEdgeInsets(top: 12, left: 4, bottom: 12, right: 4)
+        mychatTextView.layer.borderWidth = 1.5
+        mychatTextView.layer.borderColor = UIColor.systemGray3.cgColor
+        mychatTextView.layer.cornerRadius = 15
+        mychatTextView.backgroundColor = .systemGray6
+    }
 
     
 }

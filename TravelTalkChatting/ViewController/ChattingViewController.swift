@@ -57,16 +57,21 @@ extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyChatTableViewCell.identifier, for: indexPath) as? MyChatTableViewCell else { return UITableViewCell() }
             
-            cell.messageDateLabel.text = chatlist.date.stringToDateToString2()
-            cell.messageDateLabel.commonDesign(color: .systemGray, size: 12, weight: .semibold)
-            cell.messageDateLabel.textAlignment = .right
-            cell.mychatTextView.text = chatlist.message
+            cell.selectionStyle = .none
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.width)
             
+            cell.configMyChat(chatlist)
             
             return cell
         } else {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendChatTableViewCell.identifier, for: indexPath) as? FriendChatTableViewCell else { return UITableViewCell() }
+            
+            cell.selectionStyle = .none
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.width)
+            
+            cell.friendchatTextView.isScrollEnabled = false
+            cell.friendchatTextView.isEditable = false
             
             return cell
         }
