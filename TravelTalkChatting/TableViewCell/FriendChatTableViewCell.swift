@@ -8,6 +8,14 @@
 import UIKit
 
 class FriendChatTableViewCell: UITableViewCell {
+    
+    static let identifier = "FriendChatTableViewCell"
+    
+    @IBOutlet var profileImageVew: UIImageView!
+    @IBOutlet var friendNameLabel: UILabel!
+    @IBOutlet var friendchatTextView: UITextView!
+    @IBOutlet var messageDateLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

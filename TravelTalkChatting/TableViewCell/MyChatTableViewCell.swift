@@ -8,7 +8,12 @@
 import UIKit
 
 class MyChatTableViewCell: UITableViewCell {
-
+    
+    static let identifier = "MyChatTableViewCell"
+    
+    @IBOutlet var mychatTextView: UITextView!
+    @IBOutlet var messageDateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

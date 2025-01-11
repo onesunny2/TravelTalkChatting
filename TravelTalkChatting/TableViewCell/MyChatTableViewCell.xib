@@ -48,6 +48,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="messageDateLabel" destination="rVZ-gN-t3Z" id="xqa-Gb-fCN"/>
+                <outlet property="mychatTextView" destination="SAo-JX-AXu" id="cvu-AY-cRQ"/>
+            </connections>
             <point key="canvasLocation" x="129.00763358778624" y="-5.6338028169014089"/>
         </tableViewCell>
     </objects>

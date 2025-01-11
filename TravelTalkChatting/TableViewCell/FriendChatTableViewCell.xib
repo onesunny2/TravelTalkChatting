@@ -63,6 +63,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="friendNameLabel" destination="jSa-6Z-bPh" id="Hu4-7M-uN1"/>
+                <outlet property="friendchatTextView" destination="kUc-pS-FjA" id="YGF-RB-bvS"/>
+                <outlet property="messageDateLabel" destination="WBl-Qp-yVH" id="xzC-LH-Eq3"/>
+                <outlet property="profileImageVew" destination="j07-Zv-apm" id="8aw-oX-Sx3"/>
+            </connections>
             <point key="canvasLocation" x="-228.24427480916029" y="-7.042253521126761"/>
         </tableViewCell>
     </objects>
