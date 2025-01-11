@@ -137,6 +137,8 @@ extension TravelTalkViewController: UICollectionViewDelegate, UICollectionViewDa
         let sb = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: ChattingViewController.identifier) as? ChattingViewController else { return }
         
+        vc.listIndex = indexPath.item
+        
         navigationController?.pushViewController(vc, animated: true)
     }
 }
