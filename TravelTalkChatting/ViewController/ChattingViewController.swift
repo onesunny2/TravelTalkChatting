@@ -8,6 +8,8 @@
 import UIKit
 
 class ChattingViewController: UIViewController {
+    
+    static let identifier = "ChattingViewController"
 
     @IBOutlet var chatTableView: UITableView!
     @IBOutlet var bgUIView: UIView!
