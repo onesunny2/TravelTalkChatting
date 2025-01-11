@@ -29,6 +29,8 @@ class ChattingViewController: UIViewController {
         configUI()
     }
 
+    @IBAction func didEndOnExitTextfield(_ sender: UITextField) {
+    }
 }
 
 // MARK: - View 관련
@@ -58,6 +60,8 @@ extension ChattingViewController {
 extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func registerCells() {
+        
+        chatTableView.keyboardDismissMode = .onDrag
         
         chatTableView.delegate = self
         chatTableView.dataSource = self
