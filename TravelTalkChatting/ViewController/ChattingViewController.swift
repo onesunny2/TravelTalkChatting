@@ -9,6 +9,12 @@ import UIKit
 
 class ChattingViewController: UIViewController {
 
+    @IBOutlet var chatTableView: UITableView!
+    @IBOutlet var bgUIView: UIView!
+    @IBOutlet var chatboxImageView: UIImageView!
+    @IBOutlet var sendButton: UIButton!
+    @IBOutlet var chatTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
