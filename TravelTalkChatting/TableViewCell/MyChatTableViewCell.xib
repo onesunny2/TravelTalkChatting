@@ -39,9 +39,9 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="SAo-JX-AXu" secondAttribute="bottom" constant="12" id="AoN-g0-CfQ"/>
                     <constraint firstAttribute="trailing" secondItem="SAo-JX-AXu" secondAttribute="trailing" constant="16" id="HAg-Vc-56d"/>
-                    <constraint firstItem="SAo-JX-AXu" firstAttribute="leading" secondItem="rVZ-gN-t3Z" secondAttribute="trailing" constant="7.9999999999999289" id="JAh-Ni-FQE"/>
+                    <constraint firstItem="SAo-JX-AXu" firstAttribute="leading" secondItem="rVZ-gN-t3Z" secondAttribute="trailing" constant="6" id="JAh-Ni-FQE"/>
                     <constraint firstItem="SAo-JX-AXu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="bCa-xW-JB6"/>
-                    <constraint firstItem="rVZ-gN-t3Z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="lOm-eS-uFM"/>
+                    <constraint firstItem="rVZ-gN-t3Z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="lOm-eS-uFM"/>
                     <constraint firstItem="rVZ-gN-t3Z" firstAttribute="bottom" secondItem="SAo-JX-AXu" secondAttribute="bottom" id="yqQ-qQ-jhy"/>
                 </constraints>
             </tableViewCellContentView>

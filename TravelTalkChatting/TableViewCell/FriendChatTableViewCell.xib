@@ -30,15 +30,15 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kUc-pS-FjA">
-                        <rect key="frame" x="73" y="39.333333333333336" width="206" height="82.666666666666657"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kUc-pS-FjA">
+                        <rect key="frame" x="73" y="39.333333333333329" width="206" height="82.666666666666671"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                         <color key="textColor" systemColor="labelColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88:88 오후" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBl-Qp-yVH">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="88:88 오후" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBl-Qp-yVH">
                         <rect key="frame" x="289" y="102" width="60" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="yPu-wP-TWK"/>
@@ -56,8 +56,8 @@
                     <constraint firstAttribute="bottom" secondItem="WBl-Qp-yVH" secondAttribute="bottom" constant="12" id="GES-FC-GbG"/>
                     <constraint firstAttribute="bottom" secondItem="kUc-pS-FjA" secondAttribute="bottom" constant="12" id="Hq6-bE-Lfy"/>
                     <constraint firstItem="j07-Zv-apm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Nkm-gn-Zi6"/>
-                    <constraint firstItem="WBl-Qp-yVH" firstAttribute="leading" secondItem="kUc-pS-FjA" secondAttribute="trailing" constant="10" id="SoH-67-Gsx"/>
-                    <constraint firstAttribute="trailing" secondItem="WBl-Qp-yVH" secondAttribute="trailing" constant="16" id="Szt-Ma-ZtB"/>
+                    <constraint firstItem="WBl-Qp-yVH" firstAttribute="leading" secondItem="kUc-pS-FjA" secondAttribute="trailing" constant="6" id="SoH-67-Gsx"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WBl-Qp-yVH" secondAttribute="trailing" constant="16" id="Szt-Ma-ZtB"/>
                     <constraint firstItem="jSa-6Z-bPh" firstAttribute="leading" secondItem="j07-Zv-apm" secondAttribute="trailing" constant="12" id="UaN-XG-qkS"/>
                     <constraint firstItem="jSa-6Z-bPh" firstAttribute="top" secondItem="j07-Zv-apm" secondAttribute="top" id="XXr-sT-Arc"/>
                 </constraints>
