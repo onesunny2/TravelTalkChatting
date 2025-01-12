@@ -100,6 +100,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="1T8-jd-nQL" eventType="touchUpInside" id="aE4-wU-00t"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
